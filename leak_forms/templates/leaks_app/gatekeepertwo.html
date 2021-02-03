@@ -1,0 +1,24 @@
+{% load crispy_forms_tags %}
+<head>
+
+</head>
+<body>
+
+<h1>Does my leak qualify?</h1>
+
+<form method = 'POST'>
+    {% csrf_token %}
+
+    {{ form|crispy }}
+
+    {% if warning1 == None %}
+    <button type='submit'>Submit</button>
+    {% endif %}
+</form>
+
+{% if warning != None %}
+<h1><strong>*checking off all of the above boxes means your leak <u>may</u> be eligible for the one-time customer assistance program</strong></h1>
+<a href= '{{next_url}}'>Click to continue anyway</a>
+{% endif %}
+
+</body>

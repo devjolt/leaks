@@ -1,0 +1,32 @@
+{% load crispy_forms_tags %}
+<head>
+
+</head>
+<body>
+
+{% if first != None %}
+<h3>
+Residential customers who experience a severe plumbing failure inside their homes can
+apply for assistance for the excess water and wastewater usage charges on their bill. This
+program is a one-time assistance per water utility account and if approved, any future
+charges shall be paid for in full by the customer.
+<strong>Reasons why a leak would be <u>ineligible</u> for the Customer Assistance Program</strong>
+</h3>
+{% endif %}
+
+<form method = 'POST'>
+    {% csrf_token %}
+
+    {{ form|crispy }}
+
+    {% if warning1 == None %}
+    <button type='submit'>Submit</button>
+    {% endif %}
+</form>
+
+{% if warning != None %}
+<h1><strong>checking off any of the above boxes means your leak may not be eligible for the onetime customer assistance program</strong></h1>
+<a href= '{{next_url}}'>Click to continue anyway</a>
+{% endif %}
+
+</body>

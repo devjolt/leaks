@@ -1,0 +1,16 @@
+{% if uploaded != None %}
+    <h1>Uploaded so far:</h1>
+    <ul>
+    {% for file in files %}
+        <li>{{file}}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+<form method ='post' enctype ="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value = "Submit and add another file">
+</form>
+
+<a href='/leaks/newForms'>Continue to rest of form</a>

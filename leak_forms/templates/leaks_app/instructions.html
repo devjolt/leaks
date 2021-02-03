@@ -1,0 +1,62 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>7
+    <div>
+    <h1>How to apply</h1>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">How to apply</h5>
+          <p class="card-text">Please fill out the application and submit all required documentation within two months of
+            detecting the issue and completion of repair. City of London Water Engineering staff will
+            respond to you within approximately 10 business days of your submission.</p>
+          <a href="#" onclick = "display('one')" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+        <p>Please fill out the application and submit all required documentation within two months of
+        detecting the issue and completion of repair. City of London Water Engineering staff will
+        respond to you within approximately 10 business days of your submission.</p>
+            
+        <button onclick = "display('one')">Continue</button>
+    </div>
+    <div id = 'one' style='display:none;'>
+        <h2>Completed application form must include the following information:</h2>
+        <ul>
+            <li>Copies of receipts for supplies bought to correct the issue (ie. toilet flapper, fill valve)</li>
+            <li>If a licensed plumber was used, a copy of the licensed plumber’s invoice</li>
+            <li>Photos before and after the repair (clearly showing the issue and repair)</li>
+        </ul>
+        <button onclick = "display('two')">Continue</button>
+    </div>
+    <div  id= 'two' style='display:none;'>
+        <h2>What to expect if you are approved</h2>
+        <ul>
+            <li>Maximum of 3 consecutive months excess water and wastewater usage charges only may be credited to your water bill</li>
+            <li>For rental properties, the average monthly water usage can only be determined from the same occupants who occupied the unit when the leak occurred</li>
+            <li>The repair, replacement or any other associated costs due to the failure will not be credited</li>
+        </ul>
+        <button onclick = "display('three')">Continue</button>
+    </div>
+    <div id = 'three' style='display:none;'>
+        <h3>
+        It is expected that customers who have left their homes for extended periods will take
+        precautionary measures to prevent unnecessary water use. Closing the service valve at
+        the meter is one way to prevent these issues, but the customer should take care to
+        ensure the pipes in their home do not freeze and any other appliances or fixtures that
+        require water will not be affected. 
+        </h3>
+        <a href = './check_one/'>See if you are eligible</a>
+    </div>
+</body>
+
+<script>
+function display(next) {
+  var x = document.getElementById(next);
+  x.style.display = "block";
+}
+
+
+</script>
