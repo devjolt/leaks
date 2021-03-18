@@ -130,6 +130,6 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 
 EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'rbsrm100@hotmail.com'
-EMAIL_HOST_PASSWORD = 'Nogr8erhotmail'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
